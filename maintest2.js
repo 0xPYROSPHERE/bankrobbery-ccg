@@ -35282,17 +35282,44 @@
                                         {
                                             key: "_getGameDataUrl",
                                             value: function () {
-                                                var e =
-                                                        void 0 !== this._topDomain && "undefined" !== this._topDomain
-                                                            ? this._topDomain
-                                                            : this._parentDomain,
-                                                    t = FE().config;
-                                                return "https://"
-                                                    .concat(t.gameAPI, "/game/v4/get/")
-                                                    .concat(this.options.gameId.replace(/-/g, ""), "/?domain=")
-                                                    .concat(e, "&v=")
-                                                    .concat(pd.version, "&localTime=")
-                                                    .concat(new Date().getHours());
+                                                return;
+                                            }
+                                        },
+                                        {
+                                            key: "_checkBlocking",
+                                            value:
+                                                ((wL = ue(
+                                                    le.mark(function e() {
+                                                        var t, n;
+                                                        return le.wrap(
+                                                            function (e) {
+                                                                for (;;)
+                                                                    switch ((e.prev = e.next)) {
+                                                                        case 0:
+                                                                            (t = this._gameData),
+                                                                                (n = true),
+                                                                                (n =
+                                                                                    void 0 === this._gameData.dmain ||
+                                                                                    this._gameData.dmain ||
+                                                                                    n)
+                                                                        case 7:
+                                                                        case "end":
+                                                                            return e.stop();
+                                                                    }
+                                                            },
+                                                            e,
+                                                            this
+                                                        );
+                                                    })
+                                                )),
+                                                function () {
+                                                    return wL.apply(this, arguments);
+                                                }),
+                                        },
+                                        {
+                                            key: "_blockDirectTokenURLEmbedding",
+                                            value: function () {
+                                                return;
                                             },
                                         },
                                         {
